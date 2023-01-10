@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Anonymous Chat</string>
+
+    <string name="login_title">Login</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button">Log In</string>
+    <string name="login_error">Invalid email or password</string>
+
+    <string name="registration_title">Registration</string>
+    <string name="registration_email_hint">Email</string>
+    <string name="registration_password_hint">Password</string>
+    <string name="registration_button">Sign Up</string>
+    <string name="registration_error">Email already in use</string>
+
+    <string name="chat_title">Chat</string>
+    <string name="chat_message_input_hint">Type a message...</string>
+    <string name="chat_send_button">Send</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_email_hint">Enter email</string>
+    <string name="settings_password_hint">Enter password</string>
+    <string name="settings_button">Save changes</string>
+    <string name="settings_logout">Log out</string>
+
+    <string name="connections_title">Connections</string>
+
+    <string name="chat_list_title">Chat List</string>
+    <string name="add_chat_button">Add Chat</string>
+    <string name="sign_out_button">Sign Out</string>
+    <string name="empty_chat_list_message">No chats to display</string>
+    <string name="add_receiver_id_hint">Add Receiver ID</string>
+
+</resources>

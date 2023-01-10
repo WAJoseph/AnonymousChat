@@ -1,0 +1,74 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.anonymouscommunication.anonymouschat.ui.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/login_fragment" >
+
+        <action
+            android:id="@+id/action_login_fragment_to_chat_list_fragment"
+            app:destination="@id/chat_list_fragment">
+            <argument
+                android:name="UserEmail"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/chat_list_fragment"
+        android:name="com.anonymouscommunication.anonymouschat.ui.fragments.ChatListFragment"
+        android:label="fragment_chat_list"
+        tools:layout="@layout/chat_list_fragment" >
+
+        <action
+            android:id="@+id/action_chat_list_fragment_to_chat_fragment"
+            app:destination="@id/chat_fragment">
+            <argument
+                android:name="chat"
+                app:argType="reference"
+                />
+        </action>
+        <action
+            android:id="@+id/action_chat_list_fragment_to_profile_fragment"
+            app:destination="@id/profile_fragment" />
+        <action
+            android:id="@+id/action_chat_list_fragment_to_settings_fragment"
+            app:destination="@id/settings_fragment" />
+        <action
+            android:id="@+id/action_chat_list_fragment_to_connections_fragment"
+            app:destination="@id/connections_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chat_fragment"
+        android:name="com.anonymouscommunication.anonymouschat.ui.fragments.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/chat_fragment" />
+
+    <fragment
+        android:id="@+id/connections_fragment"
+        android:name="com.anonymouscommunication.anonymouschat.ui.fragments.ConnectionsFragment"
+        android:label="fragment_connections"
+        tools:layout="@layout/connections_fragment" />
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.anonymouscommunication.anonymouschat.ui.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/profile_fragment" />
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.anonymouscommunication.anonymouschat.ui.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/settings_fragment" >
+        <action
+            android:id="@+id/action_settings_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+    </fragment>
+</navigation>
